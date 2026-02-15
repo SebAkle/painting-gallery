@@ -141,6 +141,14 @@ a {
   padding: 80px 0 60px;
 }
 
+.hero-portrait {
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 24px;
+}
+
 .hero h1 {
   font-size: 2.75rem;
   font-weight: 700;
@@ -163,11 +171,11 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 40px;
+  align-items: start;
 }
 
 .gallery-item {
   cursor: pointer;
-  overflow: hidden;
   border-radius: 4px;
   background: #f5f5f5;
 }

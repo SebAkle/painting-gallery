@@ -13,8 +13,6 @@
       img.src = "images/paintings/" + painting.file;
       img.alt = painting.title;
       img.loading = "lazy";
-      img.width = 600;
-      img.height = 450;
 
       div.appendChild(img);
       container.appendChild(div);

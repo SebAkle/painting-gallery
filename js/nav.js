@@ -15,7 +15,7 @@
   const headerHTML = `
     <header class="site-header">
       <div class="container">
-        <div class="site-title"><a href="index.html">Dad's Gallery</a></div>
+        <div class="site-title"><a href="index.html">Luis Akle Estudio</a></div>
         <nav>
           <ul class="nav-links">
             ${navLink("/", "Home")}
@@ -35,7 +35,7 @@
   const footerHTML = `
     <footer class="site-footer">
       <div class="container">
-        <p>&copy; ${year} Dad's Gallery. All rights reserved.</p>
+        <p>&copy; ${year} Luis Akle Estudio. Todos los derechos reservados.</p>
       </div>
     </footer>
   `;
