@@ -4,10 +4,14 @@ A simple static website showcasing paintings. No build step — just HTML, CSS, 
 
 ## How to Add a Painting
 
-1. Drop the JPEG into `images/paintings/`
+1. Drop the JPEG into `images/paintings/` (resize to ~1024px on the long edge first — big files make the site slow)
 2. Open `js/paintings.js` and add one line to the array:
    ```js
    { file: "my-new-painting.jpg", title: "My New Painting" },
+   ```
+   You can optionally add details that appear in the lightbox:
+   ```js
+   { file: "obra.jpg", title: "Obra", medium: { es: "Acrílico", en: "Acrylic" }, size: "60 × 80 cm", year: 2023 },
    ```
 3. Commit and push to GitHub — Netlify auto-deploys.
 
@@ -35,3 +39,12 @@ Then open http://localhost:8000 in your browser.
 6. Click "Deploy site"
 
 Every push to `main` will auto-deploy.
+
+## Contact Form (Netlify Forms)
+
+The contact page uses [Netlify Forms](https://docs.netlify.com/manage/forms/setup/) — submissions are handled by Netlify, no backend needed. One-time setup in the Netlify dashboard:
+
+1. Site configuration → Forms → **Enable form detection**, then redeploy the site
+2. After the first deploy, go to Forms → the "contact" form → **Form notifications** → add an email notification pointing to Dad's Gmail
+
+Submissions also appear in the Netlify dashboard under Forms (free tier: 100 submissions/month). Spam is filtered by a honeypot field automatically.

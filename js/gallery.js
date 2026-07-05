@@ -8,19 +8,35 @@
       const div = document.createElement("div");
       div.className = "gallery-item";
       div.setAttribute("data-index", index);
+      div.setAttribute("role", "button");
+      div.setAttribute("tabindex", "0");
+      div.setAttribute("aria-label", painting.title);
 
       const img = document.createElement("img");
       img.src = "images/paintings/" + painting.file;
       img.alt = painting.title;
       img.loading = "lazy";
+      // Dimensions encoded in most filenames (e.g. "_683x1024") prevent layout shift
+      const dims = painting.file.match(/(\d+)x(\d+)/);
+      if (dims) {
+        img.width = Number(dims[1]);
+        img.height = Number(dims[2]);
+      }
 
       div.appendChild(img);
       container.appendChild(div);
 
-      // Open lightbox on click
-      div.addEventListener("click", function () {
+      function open() {
         if (typeof openLightbox === "function") {
-          openLightbox(items, index);
+          openLightbox(items, index, div);
+        }
+      }
+
+      div.addEventListener("click", open);
+      div.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          open();
         }
       });
     });

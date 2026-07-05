@@ -1,5 +1,11 @@
 // Painting data — this is the ONLY file you need to edit when adding/removing art.
-// Each entry: { file: "filename.jpg", title: "Painting Title" }
+// Each entry needs: { file: "filename.jpg", title: "Painting Title" }
+// Optional details, shown in the lightbox only when present:
+//   medium: { es: "Óleo sobre lienzo", en: "Oil on canvas" }
+//   size:   "60 × 80 cm"
+//   year:   2023
+// Full example:
+//   { file: "obra.jpg", title: "Obra", medium: { es: "Acrílico", en: "Acrylic" }, size: "60 × 80 cm", year: 2023 },
 // Images go in images/paintings/
 
 const paintings = [
@@ -29,8 +35,10 @@ const paintings = [
   { file: "PROCESION OBRA SUBASTA LILA_768x1024.jpg", title: "Procesión" },
   { file: "OBRA LUIS SUBASTA VERO 2_768x1012.jpg", title: "Obra Luis Subasta Vero" },
   { file: "Guaje_UL.jpeg", title: "Guaje" },
-  { file: "Cara_blanca_UL.jpg", title: "Ventana" },
+  { file: "Cara_blanca_UL.jpg", title: "Cara Blanca" },
+  { file: "VENTANA_683x1024.jpg", title: "Ventana" },
   { file: "Circulo_ext_UL.jpeg", title: "Círculo" },
+  { file: "Vinateria.jpeg", title: "Vinatería" },
   // Landscape orientation
   { file: "CONTEMPLANDO_1024x683.jpg", title: "Contemplando" },
   { file: "CUADROS_1024x683.jpg", title: "Cuadros" },

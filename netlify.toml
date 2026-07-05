@@ -14,6 +14,11 @@
   to = "/contact.html"
   status = 200
 
+[[redirects]]
+  from = "/gracias"
+  to = "/gracias.html"
+  status = 200
+
 # Cache images aggressively (1 year)
 [[headers]]
   for = "/images/*"
